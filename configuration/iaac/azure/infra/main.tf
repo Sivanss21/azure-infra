@@ -27,9 +27,11 @@ resource "azurerm_kubernetes_cluster" "nssazure" {
     vm_size    = "Standard_D2_v2"
   }
 
-  identity {
-    type = "SystemAssigned"
+  service_principal {
+    client_id     = f82640a4-ed9f-47b8-8d28-6c2af6acfcf1
+    client_secret = 7KT8Q~_F1NnBv1s4DSqqCCmjzaG~vaRv_QF.ea6~
   }
+
 
   tags = {
     Environment = "Production"
